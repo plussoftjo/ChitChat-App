@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import FastImage from "react-native-fast-image";
 
 export default function App() {
   return (
@@ -15,6 +16,15 @@ export default function App() {
         }}
       >
         <Text style={{ color: "white" }}>Edited From main origin</Text>
+        <FastImage
+          style={{ width: 200, height: 200 }}
+          source={{
+            uri: "https://unsplash.it/400/400?image=1",
+            headers: { Authorization: "someAuthToken" },
+            priority: FastImage.priority.normal,
+          }}
+          resizeMode={FastImage.resizeMode.contain}
+        />
       </View>
       <StatusBar style="auto" />
     </View>
