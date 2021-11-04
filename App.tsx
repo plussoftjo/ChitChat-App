@@ -14,7 +14,7 @@ export default function App() {
           alignItems: "center",
         }}
       >
-        <Text style={{ color: "white" }}>Dev Branch</Text>
+        <Text style={{ color: "white" }}>Edited From main origin</Text>
       </View>
       <StatusBar style="auto" />
     </View>
